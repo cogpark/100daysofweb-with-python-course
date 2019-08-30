@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up for our newsletter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="extras/form.css">
+    <link rel="stylesheet" href="extras/site.css">
+
+</head>
+
+<body>
+<h1>Sign up for our newsletter</h1>
+<form action="" method="post">
+    <input type="text" name="name" placeholder=" name">
+    <input type="email" name="email" placeholder=" email" required>
+    <input type="password" minlength="6" name="password" placeholder=" password" required>
+    <input type="number" min="1" name="age" placeholder=" age">
+    <select name="heard_of">
+        <option value="">Pick one:</option>
+        <option value="podcast">Podcast</option>
+        <option value="mom">Mom</option>
+        <option value="dad">Friend's mom</option>
+        <option value="talking_parrot">Talking parrot</option>
+    </select>
+    <button type="submit">Register</button>
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="extras/form_hook.js"></script>
+</body>
+</html>
