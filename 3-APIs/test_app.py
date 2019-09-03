@@ -6,7 +6,6 @@ from apistar.http import JSONResponse
 
 # helpers
 
-
 def load_drug_data():
     with open('drug_data.json') as file:
         drugs=json.loads(file.read())

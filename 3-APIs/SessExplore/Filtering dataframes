@@ -1,0 +1,44 @@
+One of the most important things you'll need to do with data is filter it. Here's how to do this with a pandas dataframe.
+
+1. Make a dataframe:
+data = {'first_name': ['Jason', 'Molly', np.nan, np.nan, np.nan],
+        'nationality': ['USA', 'USA', 'France', 'UK', 'UK'],
+        'age': [42, 52, 36, 24, 70]}
+
+df = pd.DataFrame(data, columns = ['first_name', 'nationality', 'age'])
+
+
+2. Create the condition
+You can do this in a number of ways.
+
+a. You could write the whole thing out
+Let's say you want only the athletes over 50. You could say:
+df[(df.age >= 50)]
+
+Note the parentheses: That's where your condition goes, and that's what all of these use. If it's confusing to see "df" twice,
+remember that the first time refers to the dataframe, and the second time is part of the conditional. I think of it is as:
+
+"In this dataframe, show me all the rows where the age column in this dataframe contains something equal to or greater
+than 50." It's verbose, but that's what computers like /shrug.
+
+b. Put your condition in a variable
+In real life, you might not know what the condition is ahead of time, or you might be re-using that condition in other
+contexts. In that case, you might stick your condition in a variable:
+
+lookup = 50
+df[(df.age >= lookup)]
+
+There might be an even better way, depending on your use case, though. You can...
+
+c. Put the whole slice in a variable
+By "slice," here, I am referring to the chunk of data that you're looking for: "All the rows where the age is greater than 50."
+You can just make a variable out of that -- and then ask for it when you need it
+
+lookup = df['age']==50
+df[lookup]
+
+
+
+ df[(df.sessionID == '1331081736239.oll403t8f')]
+
+ https://chrisalbon.com/python/data_wrangling/pandas_selecting_rows_on_conditions/

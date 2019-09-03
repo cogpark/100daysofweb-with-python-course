@@ -1,0 +1,58 @@
+# Load JSON data into a pandas dataframe
+
+Introduction
+JSON stands for Javascript Object Notation. If you are beginner like me, this is not particularly useful to know. 
+What is useful to remember is that one extraordinarily common internet activity is passing data around, and JSON
+is the format in which that data is most often passed.
+
+However, another common thing to do is, once you've got some data, you'll want to do something with it -- which usually means
+converting it from JSON to some other format. 
+
+One format's especially useful if_________________ is the pandas dataframe. 
+
+You're probably at least sort of familiar with a "dataframe." On the surface, it's a lot like a table: It has rows, columns, and headers. [other useful info]
+
+Here's what you'll need to do to load JSON into a pandas dataframe.
+
+I assume you already have
+* Python installed
+* Pandas installed
+* A JSON file or a URL that returns JSON when you go to it
+
+
+1. Import pandas
+Convention is:
+
+import pandas as pd
+
+2. Load your file into a dataframe
+Most examples will give you something like this:
+
+df = pd.read_json('/path_to_file')
+
+"df," like "pd," is convention: It stands for "dataframe." If it helps you to be explicit the first time(s) you do this, go ahead and write out "dataframe." Your editor
+probably has autocomplete, anyway.
+
+You can also put the file in a variable:
+
+inputData='file.json'
+pd.read_json(inputData)
+
+
+3. See the results!
+
+df.head(10) will show the first 10 rows of your dataframe, depending on where you running the file. If you run it in a terminal or an IDE, you may need:
+print(df.head(10))
+
+As you've probably guessed, the "10" indicates how many rows return. Change it to change how big the preview of your dataframe is.
+
+Gotchas:
+
+Rows vs. columns
+
+Normalized JSON
+
+
+
+
+
