@@ -1,0 +1,73 @@
+
+p, h1, form, div {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Texta,Helvetica,Arial,sans-serif;
+}
+
+h1 {
+    padding: 10px;
+}
+
+div.top-nav {
+    background-color: #14558f;
+    color: white;
+    height: 7vh;
+    width: 100%;
+}
+
+div.session-filters {
+    background-color: #F2F2F2;
+    height: 20vh;
+    font-size: 16px;
+    color: black;
+    width: 100%
+}
+
+div.session-filters p {
+    padding: 8px;
+}
+
+div.main-display {
+    background-color: white;
+    height: 73vh;
+}
+
+form input, form select {
+
+    display: inline-block;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    margin-top: 3px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+}
+
+form input::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+button {
+    border: 3px solid;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 15px 20px;
+    background-color: #e8eef4;
+    border-color: #8aaac7;
+    -webkit-box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.25);
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.25);
+}

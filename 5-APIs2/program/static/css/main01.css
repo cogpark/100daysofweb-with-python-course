@@ -1,0 +1,40 @@
+p {
+   color: green;
+}
+
+.ma__main-nav__subitems {
+   position: fixed;
+   top: 0;
+   text-align: left;
+   width: 300px;
+  }
+
+.ma__main-nav {
+  @include ma-container;
+}
+
+  @media ($bp-header-toggle-max){
+    padding-left: 0;
+    padding-right: 0;
+  }
+/**
+  &__items {
+    @include ma-reset-list;
+
+    @media ($bp-header-toggle-min){
+      display: table;
+      margin-left: -12px;
+      width: calc(100% + 24px);
+
+      .flexbox & {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    @media ($bp-large-min) {
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
+  }
+
+  **/
