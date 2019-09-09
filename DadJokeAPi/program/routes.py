@@ -1,36 +1,22 @@
 from program import app
 from flask import render_template, request
-from datetime import datetime
-
-import requests
-import json
-
+from program.jokeinventory import assets
+import random
 
 
 @app.route('/')
 @app.route('/index')
 def index():
-    timenow = str(datetime.today())
-    return render_template('index.html', time=timenow)
+    dadjoke = get_dad_joke()
+    return render_template('index.html', dadjoke=dadjoke)
 
+def get_dad_joke():
+    n = random.randint(0, (len(assets)-1))
+    dadjoke = assets[n]['joke']
+    print(dadjoke)
+    return dadjoke
 
-@app.route('/100days')
-def p100days():
-    return render_template('100days.html')
-
-
-@app.route('/chuckjokes')
-def chuck():
-    joke = get_chuck_jokes()
-    return render_template('chuckjokes.html', joke=joke)
-
-
-def get_chuck_jokes():
-    r = requests.get('https://api.chucknorris.io/jokes/random')
-    data = r.json()
-    return data['value']
-
-
+"""
 @app.route('/pokemon', methods=['GET', 'POST'])
 def pokemon():
     pokemon = []
@@ -51,4 +37,4 @@ def get_poke_color(color):
         for i in pokedata['pokemon_species']:
             pokemon.append(i['name'])
     return pokemon
-
+"""

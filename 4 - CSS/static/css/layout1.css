@@ -1,0 +1,28 @@
+
+
+body {
+    font-size: 28px;
+    padding: 1px;
+}
+
+.custom-nav li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.custom-nav {
+    background-color: gray;
+}
+
+.custom-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-nav a:active, .custom-nav a:hover {
+    color:yellow;
+}
+
+.page-content a {
+    font-weight: bold;
+}

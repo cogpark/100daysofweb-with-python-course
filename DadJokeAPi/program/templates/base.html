@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--load MUI-->
+    <link href="s" rel="stylesheet" type="text/css">
+    <!--  <script src="//cdn.muicss.com/mui-0.9.39/js/mui.min.js"></script>
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/main01.css') }}"> -->
+</head>
+<body>
+    <div class="mui-panel">Menu
+        <button class=""><a href="/index">Home</a></button>
+        <button class=""><a href="/dadjokes">Dad jokes</a></button>
+
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
