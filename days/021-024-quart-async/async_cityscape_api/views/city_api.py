@@ -1,7 +1,7 @@
-import quart
-from services import weather_service, sun_service, location_service
+import flask
+from services import location_service, sun
 
-blueprint = quart.blueprints.Blueprint(__name__, __name__)
+blueprint = flask.blueprints.Blueprint(__name__, __name__)
 
 
 @blueprint.route('/api/weather/<zip_code>/<country>', methods=['GET'])
