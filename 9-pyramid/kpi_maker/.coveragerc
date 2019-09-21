@@ -1,0 +1,3 @@
+[run]
+source = kpi_maker
+omit = kpi_maker/test*
